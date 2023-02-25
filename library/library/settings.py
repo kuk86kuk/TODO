@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'userapp',
     'authors',
     'corsheaders',
+    'todoapp',
 
 ]
 
