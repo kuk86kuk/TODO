@@ -7,7 +7,7 @@ from rest_framework.response import Response
 
 
 class ArticleLimitOffsetPagination(LimitOffsetPagination):
-    default_limit = 2
+    default_limit = 20
 
 
 class AuthorModelViewSet(ModelViewSet):
