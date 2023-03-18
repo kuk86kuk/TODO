@@ -2,6 +2,7 @@ import React from 'react';
 import AuthorList from './components/Author.js'
 import axios from 'axios'
 import Userlist from './components/User.js'
+import LoginForm from './components/login.js'
 import { HashRouter, Route, Link, NavLink, BrowserRouter} from 'react-router-dom'
 
 
@@ -23,7 +24,6 @@ class App extends React.Component {
           'authors': authors
         }
       )
-      console.log('я обновился')
     }).catch(error => console.log(error));
 
     axios.get('http://127.0.0.1:8000/api/User/').then(response => {
@@ -50,12 +50,16 @@ class App extends React.Component {
               <li>
                 <a href='/authors'>Authors</a>
               </li>
+              <li>
+                <a href='/login'>login</a>
+              </li>
             </ul>
           </nav>
           <Route exact path='/' component={() => <Userlist users={this.state.users} />} />
 
           <Route exact path='/authors' component={() => <AuthorList authors={this.state.authors} />} />
 
+          <Route exact path='/login' component={() => <LoginForm/>} />
         </BrowserRouter>
       </div>
     )

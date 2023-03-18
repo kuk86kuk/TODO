@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'todoapp',
     'rest_framework.authtoken',
+    
 
 
 ]
